@@ -59,7 +59,12 @@ public class GUIComponentFactoryImpl {
         if (heavyweightResponse.getReigns() != null && heavyweightResponse.getReigns().size() > 0) {
             for (Reign reign : heavyweightResponse.getReigns()) {
                 String reignBegan = ISODateTimeFormat.date().print(new DateTime(reign.getReignBegan()));
-                String reignEnded = ISODateTimeFormat.date().print(new DateTime(reign.getReignEnded()));
+                String reignEnded;
+                if (StringUtils.isEmpty(reign.getReignEnded())) {
+                    reignEnded = "N/A";
+                } else {
+                    reignEnded = ISODateTimeFormat.date().print(new DateTime(reign.getReignEnded()));
+                }
                 table.getTableModel().addRow(reign.getChampion(), reign.getNationality(), reign.getRecognition(), reignBegan, reignEnded);
             }
         } else {
