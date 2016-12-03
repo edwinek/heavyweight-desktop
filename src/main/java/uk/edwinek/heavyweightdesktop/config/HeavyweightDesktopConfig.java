@@ -1,4 +1,4 @@
-package com.example.ehdee.heavyweightdesktop.config;
+package uk.edwinek.heavyweightdesktop.config;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
@@ -9,8 +9,8 @@ import org.springframework.web.client.RestTemplate;
 
 @Configuration
 @ComponentScan(basePackages = {
-        "com.example.ehdee.heavyweightdesktop.client",
-        "com.example.ehdee.heavyweightdesktop.gui"})
+        "uk.edwinek.heavyweightdesktop.client",
+        "uk.edwinek.heavyweightdesktop.gui"})
 public class HeavyweightDesktopConfig {
 
     @Bean

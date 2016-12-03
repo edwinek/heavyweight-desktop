@@ -1,16 +1,14 @@
-package com.example.ehdee.heavyweightdesktop.client;
+package uk.edwinek.heavyweightdesktop.client;
 
-import com.example.ehdee.heavyweightdesktop.model.HeavyweightResponse;
+import uk.edwinek.heavyweightdesktop.model.HeavyweightResponse;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
-import org.springframework.http.client.HttpComponentsClientHttpRequestFactory;
 import org.springframework.stereotype.Component;
 import org.springframework.web.client.HttpClientErrorException;
 import org.springframework.web.client.RestClientException;
 import org.springframework.web.client.RestTemplate;
 import org.springframework.web.util.UriComponentsBuilder;
 
-import java.net.ConnectException;
 import java.util.HashMap;
 import java.util.Map;
 

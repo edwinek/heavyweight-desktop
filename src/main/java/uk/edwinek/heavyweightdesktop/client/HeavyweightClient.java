@@ -1,6 +1,6 @@
-package com.example.ehdee.heavyweightdesktop.client;
+package uk.edwinek.heavyweightdesktop.client;
 
-import com.example.ehdee.heavyweightdesktop.model.HeavyweightResponse;
+import uk.edwinek.heavyweightdesktop.model.HeavyweightResponse;
 
 public interface HeavyweightClient {
 

@@ -1,4 +1,4 @@
-package com.example.ehdee.heavyweightdesktop.model;
+package uk.edwinek.heavyweightdesktop.model;
 
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.ReflectionToStringBuilder;

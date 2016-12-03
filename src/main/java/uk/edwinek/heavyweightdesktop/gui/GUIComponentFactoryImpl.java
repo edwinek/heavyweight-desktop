@@ -1,21 +1,14 @@
-package com.example.ehdee.heavyweightdesktop.gui;
+package uk.edwinek.heavyweightdesktop.gui;
 
-import com.example.ehdee.heavyweightdesktop.model.HeavyweightResponse;
-import com.example.ehdee.heavyweightdesktop.model.Reign;
+import uk.edwinek.heavyweightdesktop.model.HeavyweightResponse;
+import uk.edwinek.heavyweightdesktop.model.Reign;
 import com.googlecode.lanterna.TerminalSize;
 import com.googlecode.lanterna.gui2.*;
 import com.googlecode.lanterna.gui2.table.Table;
-import com.googlecode.lanterna.screen.Screen;
-import com.googlecode.lanterna.screen.TerminalScreen;
-import com.googlecode.lanterna.terminal.Terminal;
 import org.joda.time.DateTime;
-import org.joda.time.format.DateTimeFormatter;
 import org.joda.time.format.ISODateTimeFormat;
 import org.springframework.stereotype.Component;
 import org.springframework.util.StringUtils;
-
-import java.io.IOException;
-import java.util.regex.Pattern;
 
 @Component
 public class GUIComponentFactoryImpl {

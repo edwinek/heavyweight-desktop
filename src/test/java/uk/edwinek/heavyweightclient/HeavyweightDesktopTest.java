@@ -1,8 +1,8 @@
-package com.example.ehdee.heavyweightclient;
+package uk.edwinek.heavyweightclient;
 
-import com.example.ehdee.heavyweightdesktop.client.HeavyweightClient;
-import com.example.ehdee.heavyweightdesktop.config.HeavyweightDesktopConfig;
-import com.example.ehdee.heavyweightdesktop.model.HeavyweightResponse;
+import uk.edwinek.heavyweightdesktop.client.HeavyweightClient;
+import uk.edwinek.heavyweightdesktop.config.HeavyweightDesktopConfig;
+import uk.edwinek.heavyweightdesktop.model.HeavyweightResponse;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;

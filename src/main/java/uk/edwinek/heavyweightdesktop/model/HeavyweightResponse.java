@@ -1,4 +1,4 @@
-package com.example.ehdee.heavyweightdesktop.model;
+package uk.edwinek.heavyweightdesktop.model;
 
 import com.fasterxml.jackson.annotation.JsonInclude;
 

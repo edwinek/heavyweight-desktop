@@ -1,10 +1,9 @@
-package com.example.ehdee.heavyweightdesktop;
+package uk.edwinek.heavyweightdesktop;
 
-import com.example.ehdee.heavyweightdesktop.client.HeavyweightClient;
-import com.example.ehdee.heavyweightdesktop.client.HeavyweightClientImpl;
-import com.example.ehdee.heavyweightdesktop.config.HeavyweightDesktopConfig;
-import com.example.ehdee.heavyweightdesktop.gui.GUIComponentFactoryImpl;
-import com.googlecode.lanterna.TerminalSize;
+import uk.edwinek.heavyweightdesktop.client.HeavyweightClient;
+import uk.edwinek.heavyweightdesktop.client.HeavyweightClientImpl;
+import uk.edwinek.heavyweightdesktop.config.HeavyweightDesktopConfig;
+import uk.edwinek.heavyweightdesktop.gui.GUIComponentFactoryImpl;
 import com.googlecode.lanterna.TextColor;
 import com.googlecode.lanterna.gui2.*;
 import com.googlecode.lanterna.gui2.dialogs.TextInputDialogBuilder;
