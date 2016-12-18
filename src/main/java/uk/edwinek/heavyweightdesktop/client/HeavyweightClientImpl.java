@@ -1,5 +1,6 @@
 package uk.edwinek.heavyweightdesktop.client;
 
+import org.joda.time.DateTime;
 import uk.edwinek.heavyweightdesktop.model.HeavyweightResponse;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
@@ -8,9 +9,9 @@ import org.springframework.web.client.HttpClientErrorException;
 import org.springframework.web.client.RestClientException;
 import org.springframework.web.client.RestTemplate;
 import org.springframework.web.util.UriComponentsBuilder;
+import uk.edwinek.heavyweightdesktop.model.Reign;
 
-import java.util.HashMap;
-import java.util.Map;
+import java.util.*;
 
 @Component
 public class HeavyweightClientImpl implements HeavyweightClient {
@@ -30,10 +31,16 @@ public class HeavyweightClientImpl implements HeavyweightClient {
         Map<String, String> parameters = new HashMap<>();
         parameters.put("date", date);
 
-        ResponseEntity<HeavyweightResponse> forEntity = null;
         try {
-            forEntity = restTemplate.getForEntity(buildUrl(date), HeavyweightResponse.class, parameters);
+            ResponseEntity<HeavyweightResponse> forEntity= restTemplate.getForEntity(buildUrl(date), HeavyweightResponse.class, parameters);
             response = forEntity.getBody();
+
+            if (response.getReigns() == null) {
+                List<Reign> reignList = new ArrayList<>();
+                reignList.add(new Reign.Builder().withReignBegan(new DateTime(date).toDate()).withChampion("Vacant").build());
+                response.setReigns(reignList);
+            }
+
         } catch (HttpClientErrorException e) {
             response = new HeavyweightResponse.Builder().withError(e.getResponseBodyAsString()).build();
         } catch (RestClientException e) {
