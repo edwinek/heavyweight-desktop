@@ -18,10 +18,8 @@ public class HeavyweightDesktopTest {
 
     @Test
     public void test() {
-
-        HeavyweightResponse pojo = heavyweightClientImpl.getReignsByDate("2014-01-0100");
+        HeavyweightResponse pojo = heavyweightClientImpl.getReignsByDate("2014-01-01");
         System.out.println(pojo);
-
     }
 
 }
