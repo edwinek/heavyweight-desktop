@@ -15,5 +15,5 @@ Run
 System Requirements
 -------------------
 * Build and deploy the `heavyweight` project
-* or
+or
 * Deploy the dockerised version, `heavyweight-deploy`
